@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noémie OSSIELE – IT Student Portfolio</title>
+
+  <meta name="description" content="Portfolio de Noémie Ossiele : projets en HTML/CSS/JS, Job Board Admin, Digital Resume." />
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="Resume.css" />
+</head>
+
+<script src="main.js" defer></script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+
+<body>
+
+  <!-- Header / Nav -->
+  <header class="header reveal">
+    <div class="container">
+      <h1 class="logo">Noémie OSSIELE</h1>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <button class="nav-close-btn" type="button" aria-label="Fermer le menu" data-nav-toggler>
+            ✕
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="#home" class="navbar-link">Home</a></li>
+          <li><a href="#about" class="navbar-link">About</a></li>
+          <li><a href="#skills" class="navbar-link">Skills</a></li>
+          <li><a href="#projects" class="navbar-link">Projects</a></li>
+          <li><a href="#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" type="button" aria-label="Ouvrir le menu" data-nav-toggler>
+        ☰
+      </button>
+    </div>
+
+    <div class="wrapper">
+      <a href="mailto:noemie.ossiele243@gmail.com" class="contact-link">✉ Mail</a>
+      <a href="tel:+33767904622" class="contact-link">✆ Phone</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="reveal">
+    <div class="main-container hero">
+      <div class="image reveal">
+        <img src="ines.png" alt="Noémie Ossiele" width="450" height="450">
+      </div>
+
+      <div class="home-content reveal">
+        <h1 class="h2">Hi! I'm <span>Noémie</span></h1>
+        <div class="typewriter">I am <span></span></div>
+        <p>Admitted to Epitech (Pre-MSc 2025), I am retraining in IT after completing a BTS GPME (Higher Technical
+          Certificate in Management and Business). Currently undergoing intensive training in tech fundamentals, I am
+          looking for a work-study program to gain field experience, develop my technical skills, and progress in
+          development.</p>
+
+        <div class="social-icon">
+          <a class="social-link" href="https://www.linkedin.com/in/no%C3%A9mie-ossiele-9a5147178/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a class="social-link" href="https://github.com/noemieossiele243-ship-it" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+
+        <a href="#contact" class="btn">🌸 Work with me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <div class="max-w-6xl mx-auto px-4 grid">
+      <div class="aboutme-box1 reveal">
+        <h2>Formations & Info</h2>
+        <ul>
+          <li class="p-3">BTS GPME – 2025</li>
+          <li class="p-3">Epitech Pré-MSc – 2025-2026</li>
+          <li class="p-3">MSc IT – 2026-2028</li>
+          <li class="p-3">Work-study – From January 2026</li>
+          <li class="p-3">Paris — IDF</li>
+        </ul>
+      </div>
+
+      <div class="aboutme-box2 reveal">
+        <h4>Languages</h4>
+        <p>C2 French — C1 English</p>
+
+        <h4>Experiences</h4>
+        <p>HR Assistant — 2022-2024<br>Team member — 2021-2022</p>
+      </div>
+    </div>
+
+    <div class="aboutme-box4 reveal">
+      <h4>Hobbies</h4>
+      <img src="hobbies.png" alt="Hobbies" width="550" height="380">
+    </div>
+  </section>
+
+   <!-- SKILLS -->
+  <section id="skills" class="skills-wrapper">
+    <div class="skills">
+      <h1 class="heading">Skills</h1>
+      <div class="list">
+        <!-- Bande 1 -->
+        <div class="item1"><img src="canva.webp" alt="Canva" width="100" height="100" loading="lazy"></div>
+        <div class="item"><img src="HTML5.svg.png" alt="HTML" width="50" height="50" loading="lazy"></div>
+        <div class="item"><img src="CSS.png" alt="CSS" width="50" height="50" loading="lazy"></div>
+        <div class="item1"><img src="python.png" alt="Python" width="50" height="50" loading="lazy"></div>
+        <div class="item"><img src="Excel.png" alt="Excel" width="50" height="50" loading="lazy"></div>
+        <div class="item"><img src="Powerpoint.svg.png" alt="PowerPoint" width="50" height="50" loading="lazy"></div>
+
+        <!-- Bande 2 (dupliquée pour l’effet de défilement) -->
+        <div class="item1" aria-hidden="true"><img src="canva.webp" alt="" width="100" height="100" loading="lazy"></div>
+        <div class="item"  aria-hidden="true"><img src="HTML5.svg.png" alt="" width="50" height="50" loading="lazy"></div>
+        <div class="item"  aria-hidden="true"><img src="CSS.png" alt="" width="50" height="50" loading="lazy"></div>
+        <div class="item1" aria-hidden="true"><img src="python.png" alt="" width="50" height="50" loading="lazy"></div>
+        <div class="item"  aria-hidden="true"><img src="Excel.png" alt="" width="50" height="50" loading="lazy"></div>
+        <div class="item"  aria-hidden="true"><img src="Powerpoint.svg.png" alt="" width="50" height="50" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I AM LOOKING FOR -->
+  <section id="looking" class="reveal">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-xl font-semibold">What I am looking for</h3>
+      <p class="mt-3"><strong>A work-study environment where I can build real tech skills.</strong></p>
+      <p class="mt-4">CV PDF available here ↓</p>
+      <a class="btn" href="Noémie.pdf" target="_blank">Download CV</a>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects reveal">
+    <div class="container">
+      <h2 class="section-title reveal">Projects</h2>
+
+      <article class="project reveal">
+        <img src="jobboard.avif" alt="Job Board Admin">
+        <div class="project-body">
+          <h3>Job Board Admin</h3>
+          <p>Admin interface with Auth + CRUD + Pagination.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+          <a class="btn" href="JobBoard.html" target="_blank">See More</a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <img src="Digital-Resume.png" alt="Digital Resume">
+        <div class="project-body">
+          <h3>Digital Resume</h3>
+          <p>A clean HTML/CSS CV with smooth scroll reveal.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+          <a class="btn" href="DigitalResume.html" target="_blank">See More</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+   <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact Me</h2>
+
+    <form action="https://formspree.io/f/mgvwglrp" method="POST">
+      <div class="input-box">
+        <label for="name" class="sr-only">Full Name</label>
+        <input id="name" type="text" name="name" placeholder="Full Name" required>
+
+        <label for="email" class="sr-only">Email</label>
+        <input id="email" type="email" name="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-box">
+        <label for="phone" class="sr-only">Phone Number</label>
+        <input id="phone" type="tel" name="phone" placeholder="Phone Number">
+
+        <label for="subject" class="sr-only">Subject</label>
+        <input id="subject" type="text" name="subject" placeholder="Subject" required>
+      </div>
+
+      <label for="message" class="sr-only">Your Message</label>
+      <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social">
+      <div class="social-icon">
+        <a href="https://www.linkedin.com/in/no%C3%A9mie-ossiele-9a5147178/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/noemieossiele243-ship-it" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+    <p class="copyright">OSSIELE Noémie Clémentine Inès | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+
+    // Toggle nav (mobile)
+    window.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.querySelector('[data-navbar]');
+      document.querySelectorAll('[data-nav-toggler]').forEach(btn => {
+        btn.addEventListener('click', () => navbar.toggleAttribute('data-open'));
+      });
+      document.querySelectorAll('.navbar-link').forEach(a => {
+        a.addEventListener('click', () => navbar.removeAttribute('data-open'));
+      });
+    });
+  </script>
+</body>
+</html>
+
+  <!-- Animations →
+<script src="main.js"></script>
+</body>
+</html>
