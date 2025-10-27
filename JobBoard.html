@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Job Board (Projects - OSSIELE Noémie)</title>
+
+  <!-- Thème global -->
+  <link rel="stylesheet" href="Resume.css" />
+  <!-- Styles page JobBoard -->
+  <link rel="stylesheet" href="JobBoard.css" />
+</head>
+
+<script src="main.js" defer></script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+
+<body>
+
+  <!-- SUBHEADER COMMUN -->
+  <header class="subheader reveal">
+    <div class="subheader__inner">
+      <span class="subheader__brand">Noémie OSSIELE</span>
+      <a href="Resume.html" class="back-btn" aria-label="Retour vers le portfolio">← Retour</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="jb-section jb-hero reveal" id="jobboard">
+    <div class="jb-container">
+      <div class="jb-hero__text reveal">
+        <h1 class="jb-h1">Job Board Admin</h1>
+        <p class="jb-lead">
+          Projet full-stack (2 semaines). J’ai pris en charge le <strong>Front Auth</strong>
+          (register / login / profil) et la <strong>page Admin</strong> (CRUD + pagination).
+          Stack : HTML, CSS, JavaScript (API REST & SQL côté back).
+        </p>
+        <div class="jb-chips">
+          <span class="chip">Durée : 2 semaines</span>
+          <span class="chip">Rôle : Front Auth + Admin</span>
+        </div>
+      </div>
+
+      <!-- Aperçu  -->
+      <button class="jb-shot reveal">
+        <img src="jobboard.avif" alt="Aperçu du Job Board" />
+      </button>
+    </div>
+  </section>
+
+  <!-- FLIP CARDS — SKILLS -->
+<section class="jb-section skills reveal" id="skills">
+  <h2 class="jb-h2" style="text-align:center;">Skills used</h2>
+
+  <div class="cards">
+    <!-- React -->
+    <div class="flip reveal">
+      <div class="flip-inner">
+        <div class="front">
+          <p class="kicker">React</p>
+          <p class="small">SPA / Router</p>
+        </div>
+        <div class="back">
+          <p class="kicker">State & Components</p>
+          <p class="small">Hooks, Context</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="flip reveal">
+      <div class="flip-inner">
+        <div class="front">
+          <p class="kicker">JavaScript</p>
+          <p class="small">Logic</p>
+        </div>
+        <div class="back">
+          <p class="kicker">Auth & CRUD</p>
+          <p class="small">fetch / axios</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS Grid -->
+    <div class="flip reveal">
+      <div class="flip-inner">
+        <div class="front">
+          <p class="kicker">CSS Grid</p>
+          <p class="small">UI / Layout</p>
+        </div>
+        <div class="back">
+          <p class="kicker">Cards + Responsive</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SCOPE + STACK -->
+  <section class="jb-section reveal">
+    <div class="jb-container">
+      <div class="grid two">
+        <div class="card reveal">
+          <h2 class="jb-h2">Scope</h2>
+          <ul class="jb-list">
+            <li>Auth : Register, Login, Profil (édition)</li>
+            <li>Admin : Listing + Création / Édition / Suppression</li>
+            <li>Pagination + états (loading, empty, error)</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h2 class="jb-h2">Stack</h2>
+          <div class="jb-chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS / Grid</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip chip--alt">REST API</span>
+            <span class="chip chip--alt">SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉSUMÉ -->
+  <section class="jb-section reveal">
+    <div class="jb-container">
+      <div class="grid three">
+        <div class="card reveal">
+          <h3 class="jb-h3">Contexte</h3>
+          <p class="jb-p">
+            Concevoir une plateforme de gestion d’offres d’emploi avec base SQL, interface
+            JavaScript (liste + détail instantané), authentification, et page Admin
+            pour gérer les données (CRUD + pagination).
+          </p>
+        </div>
+        <div class="card reveal">
+          <h3 class="jb-h3">Objectif</h3>
+          <p class="jb-p">
+            Afficher les offres, détailler sans rechargement, postuler (enregistré en base),
+            authentifier les utilisateurs, et administrer toutes les tables (CRUD + pagination).
+          </p>
+        </div>
+        <div class="card reveal">
+          <h3 class="jb-h3">Fonctionnalités</h3>
+          <ul class="jb-list">
+            <li>Liste + détail immédiat</li>
+            <li>Formulaire de candidature</li>
+            <li>Auth + Profil</li>
+            <li>Admin CRUD + pagination</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mt24 reveal">
+        <h3 class="jb-h3">Étapes clés</h3>
+        <ol class="jb-steps">
+          <li>Modèle SQL (annonces, entreprises, personnes, candidatures)</li>
+          <li>Page liste + “En savoir plus”</li>
+          <li>Détail dynamique (salaire, lieu, horaires)</li>
+          <li>API REST (CRUD)</li>
+          <li>Bouton “Postuler” → persistance BDD</li>
+          <li>Auth : login/register/profil</li>
+          <li>Admin : CRUD + pagination</li>
+          <li>Finitions UI (responsive)</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal image (ouvert par ton JS) -->
+  <dialog class="modal" id="shotModal">
+    <img alt="Capture Job Board" />
+    <button class="close" aria-label="Fermer">✕</button>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script src="jobboard.clean.js"></script>
+</body>
+</html>

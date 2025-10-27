@@ -1,0 +1,190 @@
+/* ================= Digital Resume (standalone) ================= */
+
+/* Palette (mini) — même esprit que ton portfolio */
+:root{
+  --maxw:1100px;
+  --rad:16px;
+  --pad:24px;
+  --gap:20px;
+
+  --rose:#f2a0b9;
+  --rose-2:#ffb9d2;
+  --rose-dark:#cc65b6;
+  --vivi: rgba(194,173,247,.55);
+  --vivi-dark:#4f3f69;
+  --bd: rgba(242,160,185,.35);
+  --shadow:0 14px 28px rgba(242,160,185,.18);
+  --blush-blurry: rgba(245, 144, 164, 0.18);
+  --white:#fff;
+}
+
+/* Fond doux */
+html,body{height:100%}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font: 400 16px/1.6 "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--vivi-dark);
+  background: radial-gradient(circle, rgba(247,186,210,1) 0%, rgba(230,237,245,1) 100%);
+}
+
+/* =============== Subheader (même style que JobBoard) =============== */
+.subheader{
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--bd);
+}
+.subheader__inner{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 12px;
+}
+.subheader__brand{ font-weight: 800; color: var(--vivi-dark) }
+.back-btn{
+  margin-left: auto;
+  display: inline-block;
+  padding: .5rem .9rem;
+  border-radius: 10px;
+  border: 1px solid var(--vivi);
+  background: rgba(255,255,255,.8);
+  color: var(--vivi-dark);
+  font-weight: 700; text-decoration: none;
+}
+.back-btn:hover{ background: #fff }
+
+/* =============== Hero ================== */
+.hero{
+  max-width: var(--maxw);
+  margin: 28px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 24px;
+  align-items: center;
+}
+.hero h1{ font-size: 42px; line-height: 1.15; margin-bottom: 8px }
+.hero .lead{
+  background: var(--blush-blurry);
+  border: 1px solid var(--vivi);
+  border-left: 6px solid var(--rose);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+  margin: 6px 0 10px;
+}
+
+/* Tags + CTA */
+.tags{ list-style:none; display:flex; gap:8px; margin: 8px 0 10px; padding:0 }
+.tags li{
+  font-size: 13.5px; font-weight: 700; color: #5b1740;
+  background: #ffe7ee; border:1px solid var(--bd);
+  border-radius: 999px; padding: .35rem .75rem;
+}
+.btn{
+  display:inline-flex; align-items:center; gap:.5rem;
+  border:1px solid var(--vivi); background: #fff;
+  color: var(--vivi-dark); font-weight: 800;
+  border-radius: 10px; padding: .7rem 1.1rem;
+  box-shadow: var(--shadow); text-decoration: none;
+}
+.btn:hover{ transform: translateY(-1px) }
+
+/* Shot + switch */
+.shot{
+  margin: 0; position: relative;
+  border: 2px solid rgba(255,255,255,.55);
+  border-radius: 16px; overflow: hidden;
+  box-shadow: var(--shadow);
+  background: rgba(0,0,0,.06);
+}
+.shot img{ display:block; width:100%; height:auto }
+.switch-wrap{
+  display:flex; align-items:center; gap:8px;
+  padding: 10px; background: rgba(255,255,255,.6);
+}
+.switch{ position: relative; width: 46px; height: 26px; }
+.switch input{ opacity:0; width:0; height:0 }
+.switch .slider{
+  position:absolute; inset:0; border-radius: 20px;
+  background: var(--rose); border:1px solid var(--vivi);
+}
+.switch .slider::before{
+  content:""; position:absolute; left:4px; top:3px;
+  width: 18px; height: 18px; border-radius: 999px;
+  background:#fff; transition: transform .2s ease;
+}
+.switch input:checked + .slider::before{ transform: translateX(18px) }
+.hint{ font-size: 13px; opacity:.8 }
+
+/* =============== Skills (flip-cards) =============== */
+.skills{ max-width: var(--maxw); margin: 24px auto 0; padding: 0 16px }
+.section-title{ font-size: 32px; text-align:center; margin-bottom: 10px }
+.cards{ display:flex; justify-content:center; flex-wrap:wrap; gap: 24px }
+.flip{ width: 220px; height: 240px; perspective: 1000px }
+.flip-inner{
+  position:relative; width:100%; height:100%;
+  border:1px solid var(--vivi); border-radius: 14px;
+  transform-style: preserve-3d; transition: transform .7s;
+  background: linear-gradient(120deg,#DBD6FF 50%, rgba(184,86,154,.35) 100%);
+  box-shadow: var(--shadow);
+}
+.flip:hover .flip-inner{ transform: rotateY(180deg) }
+.front, .back{
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:.4rem;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  border-radius: 14px;
+}
+.back{
+  background: linear-gradient(120deg,var(--rose-dark) 18%, #DBD6FF 72%);
+  color: #fff; transform: rotateY(180deg);
+}
+.kicker{ font-size: 1.8rem; font-weight: 800; color: var(--vivi-dark) }
+.small{ font-size: 1.25rem; opacity: .85 }
+
+/* =============== Détails (2 colonnes) =============== */
+.details{
+  max-width: var(--maxw);
+  margin: 10px auto 0;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.details .col{
+  background: rgba(255,255,255,.5);
+  border:1px solid var(--vivi);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.details h2{ font-size: 24px; margin-bottom: 6px }
+.details h3{ font-size: 18px; margin: 10px 0 4px }
+.bullets{ padding-left: 18px }
+.bullets li{ margin: .35rem 0 }
+
+/* =============== Aperçu 2 =============== */
+.difficulty{
+  max-width: var(--maxw);
+  margin: 18px auto; padding: 0 16px;
+}
+.difficulty h2{ font-size: 24px; margin-bottom: 8px }
+.code-shots{
+  border: 2px solid rgba(255,255,255,.55);
+  border-radius: 16px; overflow:hidden;
+  box-shadow: var(--shadow);
+}
+.code-shots img{ display:block; width:100%; height:auto }
+
+/* =============== Footer =============== */
+.footer{
+  margin: 20px 0 32px;
+  text-align:center; font-size: 14px; opacity:.9;
+}
+
+/* =============== Responsive =============== */
+@media (max-width: 900px){
+  .hero{ grid-template-columns: 1fr }
+  .details{ grid-template-columns: 1fr }
+}

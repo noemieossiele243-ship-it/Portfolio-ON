@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Resume (Projects - OSSIELE Noémie)</title>
+  <meta name="description" content="Projet Digital Resume : CV en ligne simple en HTML/CSS." />
+
+  <!-- Style -->
+  <link rel="stylesheet" href="DigitalResume.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+
+<script src="main.js" defer></script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+
+<body>
+
+<!-- SUBHEADER COMMUN -->
+<header class="subheader reveal">
+  <div class="subheader__inner">
+    <span class="subheader__brand">Noémie OSSIELE</span>
+    <a href="Resume.html" class="back-btn" aria-label="Retour vers le portfolio">← Retour</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero reveal">
+  <div class="txt">
+    <h1>Digital Resume</h1>
+    <p class="lead">
+      CV en ligne en <strong>HTML/CSS</strong> — design rose-vivi, sections claires, et formulaire de contact.
+    </p>
+
+    <ul class="tags">
+      <li>HTML</li><li>CSS</li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn" href="https://github.com/noemieossiele243-ship-it/Digital_Resume_ON/blob/main/index.html" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i> Code
+      </a>
+    </div>
+  </div>
+
+  <figure class="shot">
+    <img id="mainShot" class="reveal" src="Digital-Resume.png" alt="Aperçu Digital Resume" width="820" height="520" />
+    <div class="toggle-container">
+    </div>
+  </figure>
+</section>
+
+<!-- Skills (flip-cards) -->
+<section class="skills reveal">
+  <h2 class="section-title">Skills used</h2>
+
+  <div class="cards">
+    <div class="flip reveal">
+      <div class="flip-inner">
+        <div class="front">
+          <p class="kicker">SKILL</p><p class="small">Hover me</p>
+        </div>
+        <div class="back">
+          <p class="kicker">HTML</p><p class="small">Structure</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip reveal">
+      <div class="flip-inner">
+        <div class="front">
+          <p class="kicker">SKILL</p><p class="small">Hover me</p>
+        </div>
+        <div class="back">
+          <p class="kicker">CSS</p><p class="small">Mise en forme</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Détails simples -->
+<section class="details reveal">
+  <div class="col reveal">
+    <h2>But</h2>
+    <p>
+      Avoir un CV en ligne <strong>simple</strong>, <strong>propre</strong> et <strong>cohérent</strong> avec ma palette rose-vivi.
+    </p>
+
+    <h3>Stack</h3>
+    <ul class="bullets">
+      <li>HTML sémantique</li>
+      <li>CSS avec variables (couleurs/ombres)</li>
+      <li>Un switch d’aperçu (JS minimal)</li>
+    </ul>
+  </div>
+
+  <div class="col reveal">
+    <h2>Sections</h2>
+    <ul class="bullets">
+      <li>Hero (photo + intro)</li>
+      <li>About (formation, langues, expériences)</li>
+      <li>Skills (marquee ou flip-cards)</li>
+      <li>“What I am looking for” + lien CV</li>
+      <li>Contact (Formspree)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Aperçu secondaire -->
+<section class="difficulty reveal">
+  <h2>Aperçu</h2>
+  <div class="code-shots reveal">
+    <img src="apercuCV.png" alt="Second aperçu" width="520" height="340" />
+  </div>
+</section>
+
+<footer class="footer reveal">
+  <p>© Noémie Ossiele — Digital Resume</p>
+</footer>
+
+<!-- Switch d’aperçu -->
+<script>
+  const toggle = document.getElementById('shotToggle');
+  const mainShot = document.getElementById('mainShot');
+  toggle?.addEventListener('change', () => {
+    mainShot.src = toggle.checked ? 'Digital-Resume-2.png' : 'Digital-Resume.png';
+  });
+</script>
+
+<!-- Script principal -->
+<script src="main.min.js"></script>
+
+</body>
+</html>
