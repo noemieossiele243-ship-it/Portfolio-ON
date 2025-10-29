@@ -91,3 +91,32 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     el.addEventListener('pointerleave', reset);
   });
 })();
+
+// Formspree async submit + feedback
+(() => {
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.reset();
+        status.textContent = '✅ Message sent successfully!';
+      } else {
+        status.textContent = '⚠️ Error sending the message. Please try again.';
+      }
+    } catch (err) {
+      status.textContent = '🚫 Network error. Please try later.';
+    }
+  });
+})();
